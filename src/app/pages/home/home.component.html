@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular-Discovery</title>
+</head>
+<body>
+  @for (moto of motosHarleyDavidson; track moto.id) {
+  <div class="card">
+    <img [src]="moto.picture" alt="Image de la moto">
+    <div class="card-body">
+      <h5>{{moto.model}}</h5>
+      <p>Année : {{ moto.year }}</p>
+      <p>Moteur : {{ moto.engine }}</p>
+     <button><a (click)="redirectToCardMoto(moto.id, moto.model, moto.year, moto.engine, moto.picture)">Plus d'informations</a></button>
+    </div>
+  </div>}
+</body>
